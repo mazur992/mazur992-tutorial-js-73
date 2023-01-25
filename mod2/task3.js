@@ -22,7 +22,8 @@ function checkStorage(available, ordered) {
     console.log('Your order is empty!');
 
     return 'Your order is empty!';
-  } else if (ordered > available) {
+  }
+  if (ordered > available) {
     console.log('Your order is too large, not enough goods in stock!');
 
     return 'Your order is too large, not enough goods in stock!';
