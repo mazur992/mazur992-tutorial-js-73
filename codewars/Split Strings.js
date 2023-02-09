@@ -10,42 +10,29 @@
 //! ----------------------------------------------my_decision:-----------------------------------------------------
 
 function solution(str) {
-  console.log(str);
   const newArray = [];
 
   let count = 0;
 
   if (str.length % 2 === 1) {
     for (let i = 0; i < str.length; i += 2) {
-      let name;
       if (i === str.length - 1) {
-        name = str[i] + '_';
-        console.log(name);
-
-        newArray[count] = name.join('');
+        newArray[count] = str[i] + '_';
         break;
       }
-      name = str[i] + str[i + 1];
-      console.log(name);
 
-      // newArray[count] = name.join('');
+      newArray[count] = str[i] + str[i + 1];
       count += 1;
     }
   }
 
   if (str.length % 2 === 0) {
     for (let i = 0; i < str.length; i += 2) {
-      newArray[count] = [str[i] + str[i + 1]];
+      newArray[count] = str[i] + str[i + 1];
       count += 1;
     }
   }
-  // let newArray2 = [];
-  // for (let i = 0; i < newArray.length; i++) {
-  //   newArray.push();
-  // }
 
-  console.log(newArray);
-  console.table(newArray);
   return newArray;
 }
 solution('abc');
@@ -53,8 +40,31 @@ solution('abc');
 
 // console.log(productName);
 
-//! ----------------------------------------------❤ best_decision N1:  ❤-----------------------------------------------------
+//! ----------------------------------------------❤ best_decision N1: myjinxin2015 ❤-----------------------------------------------------
+// function solution(s) {
+//   return (s + '_').match(/.{2}/g) || [];
+// }
 
-//! ----------------------------------------------best_decision N2: -----------------------------------------------------
+//! ----------------------------------------------best_decision N2: phirephoenix-----------------------------------------------------
+// function solution(str) {
+//   var i = 0;
+//   var result = new Array();
+//   if (str.length % 2 !== 0) {
+//     str = str + '_';
+//   }
+//   while (i < str.length) {
+//     result.push(str[i] + str[i + 1]);
+//     i += 2;
+//   }
+//   return result;
+// }
 
-//! ----------------------------------------------best_decision N3: -----------------------------------------------------
+//! ----------------------------------------------best_decision N3: mynewvk-----------------------------------------------------
+// function solution(str) {
+//   arr = [];
+//   for (var i = 0; i < str.length; i += 2) {
+//     second = str[i + 1] || '_';
+//     arr.push(str[i] + second);
+//   }
+//   return arr;
+// }
